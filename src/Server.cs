@@ -7,4 +7,4 @@ server.Start();
 Socket socket = server.AcceptSocket(); // wait for client
 const String version = "HTTP/1.1";
 int statusCode = 200;
-socket.Send(Encoding.UTF8.GetBytes($"{version} {statusCode} OK\r\n\r\n"));
+socket.Send(Encoding.ASCII.GetBytes($"{version} {statusCode} OK\r\n\r\n"));
